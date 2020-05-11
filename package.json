@@ -1,5 +1,5 @@
 {
-  "name": "All Bun & Games",
+  "name": "All-Bun-and-Games",
   "homepage": "https://mtsai920.github.io/bun-and-games-client",
   "version": "0.1.0",
   "private": true,
@@ -19,7 +19,8 @@
     "react-dom": "^16.4.2",
     "react-router-dom": "^4.3.1",
     "resolve": "1.6.0",
-    "url-loader": "0.6.2"
+    "url-loader": "0.6.2",
+    "whatwg-fetch": "^3.0.0"
   },
   "scripts": {
     "start": "node scripts/start.js",
