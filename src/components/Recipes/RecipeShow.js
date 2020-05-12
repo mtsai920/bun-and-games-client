@@ -24,13 +24,6 @@ class RecipeShow extends Component {
       }
     })
     .then(res => this.setState({ recipe: res.data.recipe }))
-    .then(() => {
-      msgAlert({
-        heading: 'Success!',
-        variant: 'success',
-        message: 'Showing all recipes'
-      })
-    })
     .catch((err) => {
       msgAlert({
         heading: 'Uh oh!',

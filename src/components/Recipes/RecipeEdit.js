@@ -19,11 +19,9 @@ const RecipeEdit = (props) => {
 
   const { match, user } = props
 
-  console.log(props)
-
   useEffect(() => {
     axios({
-      url: `${apiUrl}/recipes/${match.params.id}/edit`,
+      url: `${apiUrl}/recipes/${match.params.id}`,
       method: 'GET',
       headers: {
         'Authorization': `Token token=${user.token}`
