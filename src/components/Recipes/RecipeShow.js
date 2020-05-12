@@ -5,7 +5,7 @@ import { Redirect, withRouter } from 'react-router-dom'
 
 const RecipeShow = (props) => {
   // Setting state for single recipe
-  const [recipe, setRecipe] = useState(null)
+  const [recipe, setRecipe] = useState()
   const [deleted, setDeleted] = useState(false)
 
   useEffect(() => {

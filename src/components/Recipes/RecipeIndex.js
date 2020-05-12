@@ -2,11 +2,19 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import apiUrl from '../../apiConfig'
 
-const RecipeIndex = () => {
-  const [recipes, setRecipes] = useState({})
+const RecipeIndex = (props) => {
+  const [recipes, setRecipes] = useState([])
+
+  const { user } = props
 
   useEffect(() => {
-    axios(`${apiUrl}/recipes`)
+    axios({
+      url: `${apiUrl}/recipes`,
+      method: 'GET',
+      headers: {
+        'Authorization': `Token token=${user.token}`
+      }
+    })
       .then(res => setRecipes(res.data.recipes))
       .catch(console.error)
   }, [])
