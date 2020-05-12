@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import apiUrl from '../../apiConfig'
-import { withRouter, Redirect } from 'react-router-dom'
+import { withRouter, Redirect, Link } from 'react-router-dom'
 
 class RecipeShow extends Component {
   constructor () {
@@ -69,7 +69,9 @@ class RecipeShow extends Component {
         <h4>{recipe.description}</h4>
         <h4>Ingredients: {recipe.ingredients}</h4>
         <h4>Instructions: {recipe.instructions}</h4>
-        <button onClick={this.edit}>Edit</button>
+        <Link to={`/recipes/${this.props.match.params.id}/edit`}>
+          <button onClick={this.edit}>Edit</button>
+        </Link>
         <button onClick={this.destroy}>Delete</button>
       </div>
     }
