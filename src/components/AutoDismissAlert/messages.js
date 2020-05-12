@@ -7,5 +7,4 @@ export default {
   changePasswordSuccess: 'Password changed successfully!',
   changePasswordFailure: 'Failed to change passwords. Check your old password and try again.',
   createRecipeSuccess: 'Recipe successfully saved.',
-  createRecipeFailure: 'Unable to create recipe. Please try again.'
 }

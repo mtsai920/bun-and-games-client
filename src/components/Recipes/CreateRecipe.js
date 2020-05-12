@@ -11,7 +11,7 @@ const CreateRecipe = (props) => {
   const [recipe, setRecipe] = useState({
     title: '',
     description: '',
-    ingredients: [],
+    ingredients: '',
     instructions: ''
   })
 
@@ -47,14 +47,14 @@ const CreateRecipe = (props) => {
         msgAlert({
           heading: 'Failed to create recipe',
           variant: 'danger',
-          message: messages.createRecipeFailure
+          message: 'Failed due to error: ' + error.message
         })
       })
       .catch(console.error)
   }
 
   if (recipeId) {
-    return <Redirect to={`/recipes/${recipe._id}`} />
+    return <Redirect to={`/recipes`} />
   }
 
   return (
@@ -78,13 +78,17 @@ const CreateRecipe = (props) => {
             onChange={handleChange}
           />
 
-          <Form.Label>Ingredients</Form.Label>
+          <Form.Group controlId="exampleForm.ControlTextarea1">
+            <Form.Label>Ingredients</Form.Label>
             <Form.Control
-              placeholder="1/4 cup of flour"
-              value={recipe.ingredients}
-              name="ingredients"
-              onChange={handleChange}
+            as="textarea"
+            rows="3"
+            placeholder="1/4 cup of flour"
+            value={recipe.ingredients}
+            name="ingredients"
+            onChange={handleChange}
             />
+          </Form.Group>
 
           <Form.Group controlId="exampleForm.ControlTextarea1">
             <Form.Label>Instructions</Form.Label>

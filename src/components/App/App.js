@@ -61,7 +61,7 @@ class App extends Component {
             <CreateRecipe msgAlert={this.msgAlert} user={user}/>
           )} />
           <AuthenticatedRoute user={user} exact path="/recipes/:id" render={() => (
-            <RecipeShow msgAlert={this.msgAlert} user={user}/>
+            <RecipeShow msgAlert={this.msgAlert} user={user} match={this.props.params}/>
           )} />
           <AuthenticatedRoute user={user} exact path="/recipes" render={() => (
             <RecipeIndex msgAlert={this.msgAlert} user={user}/>

@@ -19,11 +19,18 @@ const RecipeIndex = (props) => {
       .catch(console.error)
   }, [])
 
-  const showRecipes = recipes.map(recipe => (
-    <li key={recipe._id}>
-      <h3>{recipe.title}</h3>
-    </li>
-  ))
+  let showRecipes
+
+  if (!recipes) {
+    showRecipes = "You have no recipes yet!"
+  } else {
+    showRecipes = recipes.map(recipe => (
+      <li key={recipe._id}>
+        <a>{recipe._id}</a>
+        <h3>{recipe.title}</h3>
+      </li>
+    ))
+  }
 
   return (
     <div>
