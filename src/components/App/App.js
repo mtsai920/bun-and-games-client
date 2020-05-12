@@ -11,6 +11,7 @@ import ChangePassword from '../ChangePassword/ChangePassword'
 import CreateRecipe from '../Recipes/CreateRecipe'
 import RecipeShow from '../Recipes/RecipeShow'
 import RecipeIndex from '../Recipes/RecipeIndex'
+import RecipeEdit from '../Recipes/RecipeEdit'
 
 class App extends Component {
   constructor () {
@@ -65,6 +66,9 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} exact path="/recipes" render={() => (
             <RecipeIndex msgAlert={this.msgAlert} user={user}/>
+          )}/>
+          <AuthenticatedRoute user={user} exact path="/recipes/:id/edit" render={() => (
+            <RecipeEdit msgAlert={this.msgAlert} user={user} match={this.props.params}/>
           )}/>
         </main>
         <body className="home">

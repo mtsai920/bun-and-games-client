@@ -76,7 +76,7 @@ class RecipeShow extends Component {
         <h4>{recipe.description}</h4>
         <h4>Ingredients: {recipe.ingredients}</h4>
         <h4>Instructions: {recipe.instructions}</h4>
-        <button>Edit</button>
+        <button onClick={this.edit}>Edit</button>
         <button onClick={this.destroy}>Delete</button>
       </div>
     }
