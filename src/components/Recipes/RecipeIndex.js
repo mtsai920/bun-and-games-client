@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 import apiUrl from '../../apiConfig'
 
@@ -26,8 +27,8 @@ const RecipeIndex = (props) => {
   } else {
     showRecipes = recipes.map(recipe => (
       <li key={recipe._id}>
-        <a>{recipe._id}</a>
-        <h3>{recipe.title}</h3>
+        <Link className="showLink" to={`/recipes/${recipe._id}`}>{recipe.title}</Link>
+        <h4>{recipe.description}</h4>
       </li>
     ))
   }
