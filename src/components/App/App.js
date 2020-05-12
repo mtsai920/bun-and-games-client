@@ -10,6 +10,7 @@ import SignOut from '../SignOut/SignOut'
 import ChangePassword from '../ChangePassword/ChangePassword'
 import CreateRecipe from '../Recipes/CreateRecipe'
 import RecipeShow from '../Recipes/RecipeShow'
+import RecipeIndex from '../Recipes/RecipeIndex'
 
 class App extends Component {
   constructor () {
@@ -62,7 +63,12 @@ class App extends Component {
           <AuthenticatedRoute user={user} exact path="/recipes/:id" render={() => (
             <RecipeShow msgAlert={this.msgAlert} user={user}/>
           )} />
+          <AuthenticatedRoute user={user} exact path="/recipes" render={() => (
+            <RecipeIndex msgAlert={this.msgAlert} user={user}/>
+          )}/>
         </main>
+        <body className="home">
+        </body>
       </Fragment>
     )
   }

@@ -5,5 +5,7 @@ export default {
   signInFailure: 'Failed to sign in. Check your email and password and try again.',
   signOutSuccess: 'Come back soon!',
   changePasswordSuccess: 'Password changed successfully!',
-  changePasswordFailure: 'Failed to change passwords. Check your old password and try again.'
+  changePasswordFailure: 'Failed to change passwords. Check your old password and try again.',
+  createRecipeSuccess: 'Recipe successfully saved.',
+  createRecipeFailure: 'Unable to create recipe. Please try again.'
 }

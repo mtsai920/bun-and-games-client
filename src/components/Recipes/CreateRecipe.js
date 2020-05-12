@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 import apiUrl from '../../apiConfig'
+import messages from '../AutoDismissAlert/messages'
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
 
 const CreateRecipe = (props) => {
   // Setting state for recipe
@@ -15,7 +18,7 @@ const CreateRecipe = (props) => {
   const [recipeId, setRecipeId] = useState(null)
 
   // Deconstructing props to access user
-  const { user } = props
+  const { user, msgAlert } = props
 
   const handleChange = event => {
     event.persist()
@@ -35,50 +38,71 @@ const CreateRecipe = (props) => {
       }
     })
       .then(res => setRecipeId(res.data.recipe._id))
+      .then(() => msgAlert({
+        heading: 'Recipe created!',
+        variant: 'success',
+        message: messages.createRecipeSuccess
+      }))
+      .catch((error) => {
+        msgAlert({
+          heading: 'Failed to create recipe',
+          variant: 'danger',
+          message: messages.createRecipeFailure
+        })
+      })
       .catch(console.error)
   }
 
   if (recipeId) {
-    return <Redirect to={`/recipes/${recipeId}`} />
+    return <Redirect to={`/recipes/${recipe._id}`} />
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>Recipe Title</label>
-      <input
-        placeholder="Chocolate Cookies"
-        value={recipe.title}
-        name="title"
-        onChange={handleChange}
-      />
+    <div className="row">
+      <div className="col-sm-10 col-md-8 mx-auto mt-5">
+        <h2>Create a Recipe</h2>
+        <Form onSubmit={handleSubmit}>
+          <Form.Label>Recipe Title</Form.Label>
+          <Form.Control
+            placeholder="Chocolate Cookies"
+            value={recipe.title}
+            name="title"
+            onChange={handleChange}
+          />
 
-      <label>Description</label>
-      <input
-        placeholder="Delicious cookies made in the oven"
-        value={recipe.description}
-        name="description"
-        onChange={handleChange}
-      />
+          <Form.Label>Description</Form.Label>
+          <Form.Control
+            placeholder="Delicious cookies made in the oven"
+            value={recipe.description}
+            name="description"
+            onChange={handleChange}
+          />
 
-      <label>Ingredients</label>
-      <input
-        placeholder="1/4 cup of flour"
-        value={recipe.ingredients}
-        name="ingredients"
-        onChange={handleChange}
-      />
+          <Form.Label>Ingredients</Form.Label>
+            <Form.Control
+              placeholder="1/4 cup of flour"
+              value={recipe.ingredients}
+              name="ingredients"
+              onChange={handleChange}
+            />
 
-      <label>Instructions</label>
-      <input
-        placeholder="Combine and bake"
-        value={recipe.instructions}
-        name="instructions"
-        onChange={handleChange}
-        />
+          <Form.Group controlId="exampleForm.ControlTextarea1">
+            <Form.Label>Instructions</Form.Label>
+            <Form.Control
+            as="textarea"
+            rows="3"
+            placeholder="Combine and bake"
+            value={recipe.instructions}
+            name="instructions"
+            onChange={handleChange}
+            />
+          </Form.Group>
 
-      <button type="submit">Create Recipe</button>
+          <Button type="submit">Create Recipe</Button>
 
-    </form>
+        </Form>
+      </div>
+    </div>
   )
 
 }
