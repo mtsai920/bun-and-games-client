@@ -62,43 +62,51 @@ const RecipeCreate = (props) => {
       <div className="col-sm-10 col-md-8 mx-auto mt-5">
         <h2>Create a Recipe</h2>
         <Form onSubmit={handleSubmit}>
-          <Form.Label>Recipe Title</Form.Label>
-          <Form.Control
-            placeholder="Chocolate Cookies"
-            value={recipe.title}
-            name="title"
-            onChange={handleChange}
-          />
+          <Form.Group controlId="formHorizontal">
+            <Form.Label>Recipe Title</Form.Label>
+            <Form.Control
+              required
+              placeholder="Chocolate Cookies"
+              value={recipe.title}
+              name="title"
+              onChange={handleChange}
+            />
+          </Form.Group>
 
-          <Form.Label>Description</Form.Label>
-          <Form.Control
-            placeholder="Delicious cookies made in the oven"
-            value={recipe.description}
-            name="description"
-            onChange={handleChange}
-          />
+          <Form.Group controlId="formHorizontal">
+            <Form.Label>Description</Form.Label>
+            <Form.Control
+              required
+              placeholder="Delicious cookies made in the oven"
+              value={recipe.description}
+              name="description"
+              onChange={handleChange}
+            />
+          </Form.Group>
 
           <Form.Group controlId="exampleForm.ControlTextarea1">
             <Form.Label>Ingredients</Form.Label>
             <Form.Control
-            as="textarea"
-            rows="3"
-            placeholder="1/4 cup of flour"
-            value={recipe.ingredients}
-            name="ingredients"
-            onChange={handleChange}
+              required
+              as="textarea"
+              rows="3"
+              placeholder="1/4 cup of flour"
+              value={recipe.ingredients}
+              name="ingredients"
+              onChange={handleChange}
             />
           </Form.Group>
 
           <Form.Group controlId="exampleForm.ControlTextarea1">
             <Form.Label>Instructions</Form.Label>
             <Form.Control
-            as="textarea"
-            rows="3"
-            placeholder="Combine and bake"
-            value={recipe.instructions}
-            name="instructions"
-            onChange={handleChange}
+              required
+              as="textarea"
+              rows="3"
+              placeholder="Combine and bake"
+              value={recipe.instructions}
+              name="instructions"
+              onChange={handleChange}
             />
           </Form.Group>
 

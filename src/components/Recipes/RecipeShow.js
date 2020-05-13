@@ -68,12 +68,22 @@ class RecipeShow extends Component {
       <div className="recipe-show">
         <h3>Title: {recipe.title}</h3>
         <h4>Description: {recipe.description}</h4>
-        <h4>Ingredients: {recipe.ingredients}</h4>
-        <h4>Instructions: {recipe.instructions}</h4>
-        <Link to={`/recipes/${this.props.match.params.id}/edit`}>
-          <Button onClick={this.edit}>Edit</Button>
-        </Link>
-        <Button onClick={this.destroy}>Delete</Button>
+        <h4>Ingredients:</h4>
+          <span className="recipe-text-wrap">{recipe.ingredients}</span>
+        <h4>Instructions:</h4>
+          <span className="recipe-text-wrap">{recipe.instructions}</span>
+
+        <div>
+          <Link className="recipe-show-buttons" to={`/recipes/${this.props.match.params.id}/edit`}>
+            <Button variant="dark" onClick={this.edit}>Edit</Button>
+          </Link>
+
+          <Button variant="dark" className="recipe-show-buttons" onClick={this.destroy}>Delete</Button>
+
+          <Link className="recipe-show-buttons" to={`/recipes`}>
+            <Button variant="dark">Back to Recipes</Button>
+          </Link>
+        </div>
       </div>
     }
     return (

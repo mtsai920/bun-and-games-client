@@ -1,5 +1,18 @@
 @import '~bootstrap/scss/bootstrap';
 
+// ----- Important ----- //
+
+* {
+  font-family: 'Barlow', sans-serif;
+}
+
+// ----- Recipe Text ----- //
+
+.no-recipes {
+  text-align: center;
+  padding-top: 30px;
+}
+
 .recipe-index {
 }
 
@@ -10,7 +23,24 @@
 
 .recipe-show {
   text-align: center;
+  padding-top: 15px;
 }
+
+.recipe-text-wrap {
+  white-space: pre-line;
+}
+
+// ----- Buttons ----- //
+
+.recipe-show-buttons {
+  margin: 10px;
+}
+
+.favorite-button {
+  text-align: right;
+}
+
+// ----- Header ----- //
 
 .header-brand {
   font-size: 25px;
