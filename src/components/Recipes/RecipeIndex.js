@@ -23,7 +23,11 @@ const RecipeIndex = (props) => {
       .catch(console.error)
   }, [])
 
-  const toggleFavorited = function () {}
+  const toggleFavorited = () => {
+    setFavorited((prevState) => {
+      return { favorited: !setFavorited(favorited) }
+    })
+  }
 
   let showRecipes
 
@@ -36,11 +40,15 @@ const RecipeIndex = (props) => {
   }
 
     showRecipes = recipes.map(recipe => (
-      <div key={recipe._id}>
-        <li className="recipe-index">
+      <div className="recipe-index" key={recipe._id}>
+        <li>
           <Link className="showLink" to={`/recipes/${recipe._id}`}>{recipe.title}</Link>
-          <h4>{recipe.description}</h4>
-          <Button className="favorite-button">FAVORITE</Button>
+          <h4 className="recipe-index-description">{recipe.description}</h4>
+          <div className="favorite-button">
+            <Button onClick={toggleFavorited} variant="outline-success">
+              {favorited ? 'FAVORITED' : 'FAVORITE' }
+            </Button>
+          </div>
         </li>
         <hr />
       </div>

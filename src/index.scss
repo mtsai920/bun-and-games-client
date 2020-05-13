@@ -14,11 +14,18 @@
 }
 
 .recipe-index {
+  align-items: center;
 }
 
 .showLink {
   font-size: 30px;
   text-decoration: underline;
+  display: block;
+}
+
+.recipe-index-description {
+  display: inline-block;
+  padding-top: 10px;
 }
 
 .recipe-show {
@@ -37,7 +44,8 @@
 }
 
 .favorite-button {
-  text-align: right;
+  float: right;
+  display: inline-block;
 }
 
 // ----- Header ----- //
