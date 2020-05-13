@@ -42,6 +42,8 @@ $darkGray: #262626;
   border: 1px solid $gray;
   border-radius: 9px;
   padding: 10px;
+  max-width: 500px;
+  margin: auto;
 }
 
 .recipe-show-title {
@@ -69,6 +71,10 @@ $darkGray: #262626;
 
 .recipe-show-buttons {
   margin: 10px;
+}
+
+.recipe-show-buttons-div {
+  margin-top: 20px;
 }
 
 .favorite-button {

@@ -111,7 +111,7 @@ const RecipeCreate = (props) => {
             />
           </Form.Group>
 
-          <Button type="submit">Create Recipe</Button>
+          <Button variant="success" type="submit">Create Recipe</Button>
 
         </Form>
       </div>

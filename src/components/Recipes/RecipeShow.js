@@ -77,7 +77,7 @@ class RecipeShow extends Component {
           <span className="recipe-show-text-wrap">{recipe.instructions}</span>
           </div>
 
-        <div>
+        <div className="recipe-show-buttons-div">
           <Link className="recipe-show-buttons" to={`/recipes`}>
             <Button variant="dark">Back to Recipes</Button>
           </Link>
@@ -86,7 +86,7 @@ class RecipeShow extends Component {
             <Button variant="dark" onClick={this.edit}>Edit</Button>
           </Link>
 
-          <Button variant="dark" className="recipe-show-buttons" onClick={this.destroy}>Delete</Button>
+          <Button variant="danger" className="recipe-show-buttons" onClick={this.destroy}>Delete</Button>
         </div>
       </div>
     }
