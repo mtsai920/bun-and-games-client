@@ -12,6 +12,7 @@ import RecipeCreate from '../Recipes/RecipeCreate'
 import RecipeShow from '../Recipes/RecipeShow'
 import RecipeIndex from '../Recipes/RecipeIndex'
 import RecipeEdit from '../Recipes/RecipeEdit'
+import Home from '../Home/Home'
 
 class App extends Component {
   constructor () {
@@ -52,6 +53,9 @@ class App extends Component {
           <Route path='/sign-in' render={() => (
             <SignIn msgAlert={this.msgAlert} setUser={this.setUser} />
           )} />
+          <AuthenticatedRoute user={user} path='/homepage' render={() => (
+            <Home/>
+          )}/>
           <AuthenticatedRoute user={user} path='/sign-out' render={() => (
             <SignOut msgAlert={this.msgAlert} clearUser={this.clearUser} user={user} />
           )} />
@@ -71,8 +75,6 @@ class App extends Component {
             <RecipeEdit msgAlert={this.msgAlert} user={user} match={this.props.params}/>
           )}/>
         </main>
-        <body className="home">
-        </body>
       </Fragment>
     )
   }

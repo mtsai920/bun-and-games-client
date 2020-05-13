@@ -82,12 +82,24 @@ $darkGray: #262626;
   display: inline-block;
 }
 
+// ----- Homepage ----- //
+
+.homepage-div {
+  text-align: center;
+}
+
 // ----- Header ----- //
 
 .header-brand {
   font-size: 25px;
-  font-family: 'Barlow', sans-serif;
-  font-style: italic;
+  font-family: 'Fredoka One', cursive;
+  // font-style: italic;
+}
+
+.homepage-brand {
+  font-family: 'Fredoka One', cursive;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .navbar {

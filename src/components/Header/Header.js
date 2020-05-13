@@ -26,8 +26,8 @@ const unauthenticatedOptions = (
 
 const Header = ({ user }) => (
   <Navbar className="navbar" bg="danger" variant="dark" expand="md">
-    <Navbar.Brand className="header-brand" href="#">
-      All Bun & Games
+    <Navbar.Brand className="header-brand" href="#/homepage">
+      ALL BUN & GAMES <span className="emoji" role="img" aria-label="donut-emoji"> 🥯</span>
     </Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
