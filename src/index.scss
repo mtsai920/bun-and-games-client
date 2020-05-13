@@ -1,5 +1,10 @@
 @import '~bootstrap/scss/bootstrap';
 
+// ----- Colors ----- //
+$black: #000;
+$gray: #808080;
+$darkGray: #262626;
+
 // ----- Important ----- //
 
 * {
@@ -34,11 +39,22 @@
 }
 
 .recipe-show-div {
-  border: 1px solid black;
+  border: 1px solid $gray;
+  border-radius: 9px;
+  padding: 10px;
 }
 
 .recipe-show-title {
   text-decoration: underline;
+}
+
+.recipe-show-description {
+  // font-style: italic;
+  color: $gray;
+}
+
+.recipe-show-base {
+  padding-top: 20px;
 }
 
 .recipe-show-text {

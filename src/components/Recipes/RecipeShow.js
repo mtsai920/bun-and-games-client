@@ -67,26 +67,26 @@ class RecipeShow extends Component {
       recipeJsx =
       <div className="recipe-show">
         <h3 className="recipe-show-title">{recipe.title}</h3>
-        <h4>{recipe.description}</h4>
-        <h4>Ingredients:</h4>
+        <h4 className="recipe-show-description">{recipe.description}</h4>
+        <h4 className="recipe-show-base">Ingredients:</h4>
           <div className="recipe-show-div">
           <span className="recipe-show-text-wrap">{recipe.ingredients}</span>
           </div>
-        <h4>Instructions:</h4>
+        <h4 className="recipe-show-base">Instructions:</h4>
           <div className="recipe-show-div">
           <span className="recipe-show-text-wrap">{recipe.instructions}</span>
           </div>
 
         <div>
+          <Link className="recipe-show-buttons" to={`/recipes`}>
+            <Button variant="dark">Back to Recipes</Button>
+          </Link>
+
           <Link className="recipe-show-buttons" to={`/recipes/${this.props.match.params.id}/edit`}>
             <Button variant="dark" onClick={this.edit}>Edit</Button>
           </Link>
 
           <Button variant="dark" className="recipe-show-buttons" onClick={this.destroy}>Delete</Button>
-
-          <Link className="recipe-show-buttons" to={`/recipes`}>
-            <Button variant="dark">Back to Recipes</Button>
-          </Link>
         </div>
       </div>
     }
