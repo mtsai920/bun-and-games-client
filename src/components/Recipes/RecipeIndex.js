@@ -24,9 +24,7 @@ const RecipeIndex = (props) => {
   }, [])
 
   const toggleFavorited = () => {
-    setFavorited((prevState) => {
-      return { favorited: !setFavorited(favorited) }
-    })
+    return { favorited: setFavorited(!favorited) }
   }
 
   let showRecipes
@@ -41,7 +39,6 @@ const RecipeIndex = (props) => {
 
     showRecipes = recipes.map(recipe => (
       <div className="recipe-index" key={recipe._id}>
-        <li>
           <Link className="showLink" to={`/recipes/${recipe._id}`}>{recipe.title}</Link>
           <h4 className="recipe-index-description">{recipe.description}</h4>
           <div className="favorite-button">
@@ -49,7 +46,6 @@ const RecipeIndex = (props) => {
               {favorited ? 'FAVORITED' : 'FAVORITE' }
             </Button>
           </div>
-        </li>
         <hr />
       </div>
     ))

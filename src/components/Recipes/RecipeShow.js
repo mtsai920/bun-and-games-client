@@ -66,12 +66,16 @@ class RecipeShow extends Component {
     } else {
       recipeJsx =
       <div className="recipe-show">
-        <h3>Title: {recipe.title}</h3>
-        <h4>Description: {recipe.description}</h4>
+        <h3 className="recipe-show-title">{recipe.title}</h3>
+        <h4>{recipe.description}</h4>
         <h4>Ingredients:</h4>
-          <span className="recipe-text-wrap">{recipe.ingredients}</span>
+          <div className="recipe-show-div">
+          <span className="recipe-show-text-wrap">{recipe.ingredients}</span>
+          </div>
         <h4>Instructions:</h4>
-          <span className="recipe-text-wrap">{recipe.instructions}</span>
+          <div className="recipe-show-div">
+          <span className="recipe-show-text-wrap">{recipe.instructions}</span>
+          </div>
 
         <div>
           <Link className="recipe-show-buttons" to={`/recipes/${this.props.match.params.id}/edit`}>

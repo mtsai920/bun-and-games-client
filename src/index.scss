@@ -33,7 +33,19 @@
   padding-top: 15px;
 }
 
-.recipe-text-wrap {
+.recipe-show-div {
+  border: 1px solid black;
+}
+
+.recipe-show-title {
+  text-decoration: underline;
+}
+
+.recipe-show-text {
+  display: block;
+}
+
+.recipe-show-text-wrap {
   white-space: pre-line;
 }
 
@@ -54,4 +66,8 @@
   font-size: 25px;
   font-family: 'Barlow', sans-serif;
   font-style: italic;
+}
+
+.navbar {
+  margin-bottom: 15px;
 }

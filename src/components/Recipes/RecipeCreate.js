@@ -12,7 +12,8 @@ const RecipeCreate = (props) => {
     title: '',
     description: '',
     ingredients: '',
-    instructions: ''
+    instructions: '',
+    favorited: false
   })
 
   const [recipeId, setRecipeId] = useState(null)

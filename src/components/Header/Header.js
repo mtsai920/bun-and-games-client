@@ -25,7 +25,7 @@ const unauthenticatedOptions = (
 // )
 
 const Header = ({ user }) => (
-  <Navbar bg="danger" variant="dark" expand="md">
+  <Navbar className="navbar" bg="danger" variant="dark" expand="md">
     <Navbar.Brand className="header-brand" href="#">
       All Bun & Games
     </Navbar.Brand>
