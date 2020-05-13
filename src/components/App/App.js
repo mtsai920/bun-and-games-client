@@ -8,7 +8,7 @@ import SignUp from '../SignUp/SignUp'
 import SignIn from '../SignIn/SignIn'
 import SignOut from '../SignOut/SignOut'
 import ChangePassword from '../ChangePassword/ChangePassword'
-import CreateRecipe from '../Recipes/CreateRecipe'
+import RecipeCreate from '../Recipes/RecipeCreate'
 import RecipeShow from '../Recipes/RecipeShow'
 import RecipeIndex from '../Recipes/RecipeIndex'
 import RecipeEdit from '../Recipes/RecipeEdit'
@@ -59,7 +59,7 @@ class App extends Component {
             <ChangePassword msgAlert={this.msgAlert} user={user} />
           )} />
           <AuthenticatedRoute user={user} exact path='/create-recipe' render={() => (
-            <CreateRecipe msgAlert={this.msgAlert} user={user}/>
+            <RecipeCreate msgAlert={this.msgAlert} user={user}/>
           )} />
           <AuthenticatedRoute user={user} exact path="/recipes/:id" render={() => (
             <RecipeShow msgAlert={this.msgAlert} user={user} match={this.props.params}/>

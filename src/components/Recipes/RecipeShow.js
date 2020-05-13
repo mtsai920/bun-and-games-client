@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import apiUrl from '../../apiConfig'
 import { withRouter, Redirect, Link } from 'react-router-dom'
+import Button from 'react-bootstrap/Button'
 
 class RecipeShow extends Component {
   constructor () {
@@ -47,7 +48,7 @@ class RecipeShow extends Component {
       msgAlert({
         heading: 'Success!',
         variant: 'success',
-        message: 'Recipe successfully deleted'
+        message: 'Recipe successfully deleted.'
       })
     })
     .then(() => this.setState({ deleted: true }))
@@ -64,15 +65,15 @@ class RecipeShow extends Component {
       return <Redirect to={`/recipes`} />
     } else {
       recipeJsx =
-      <div>
-        <h3>{recipe.title}</h3>
-        <h4>{recipe.description}</h4>
+      <div className="recipe-show">
+        <h3>Title: {recipe.title}</h3>
+        <h4>Description: {recipe.description}</h4>
         <h4>Ingredients: {recipe.ingredients}</h4>
         <h4>Instructions: {recipe.instructions}</h4>
         <Link to={`/recipes/${this.props.match.params.id}/edit`}>
-          <button onClick={this.edit}>Edit</button>
+          <Button onClick={this.edit}>Edit</Button>
         </Link>
-        <button onClick={this.destroy}>Delete</button>
+        <Button onClick={this.destroy}>Delete</Button>
       </div>
     }
     return (

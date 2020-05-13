@@ -17,7 +17,7 @@ const RecipeEdit = (props) => {
   // Setting updated state for recipe
   const [updated, setUpdated] = useState(false)
 
-  const { match, user } = props
+  const { match, user, msgAlert } = props
 
   useEffect(() => {
     axios({
@@ -47,7 +47,20 @@ const RecipeEdit = (props) => {
       }
     })
     .then(() => setUpdated(true))
-    .catch(console.error)
+    .then(() => {
+      msgAlert({
+        heading: 'Success!',
+        variant: 'success',
+        message: 'Recipe successfully updated.'
+      })
+    })
+    .catch((err) => {
+      msgAlert({
+        heading: 'Uh oh!',
+        variant: 'danger',
+        message: 'Unable to update recipe due to error: ' + err.message
+      })
+    })
   }
 
   if (updated) {
@@ -99,7 +112,7 @@ const RecipeEdit = (props) => {
             />
           </Form.Group>
 
-          <Button type="submit">Create Recipe</Button>
+          <Button type="submit">Update Recipe</Button>
 
         </Form>
       </div>

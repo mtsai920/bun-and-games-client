@@ -6,7 +6,7 @@ import messages from '../AutoDismissAlert/messages'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
-const CreateRecipe = (props) => {
+const RecipeCreate = (props) => {
   // Setting state for recipe
   const [recipe, setRecipe] = useState({
     title: '',
@@ -111,4 +111,4 @@ const CreateRecipe = (props) => {
 
 }
 
-export default CreateRecipe
+export default RecipeCreate

@@ -23,13 +23,19 @@ const RecipeIndex = (props) => {
   let showRecipes
 
   if (!recipes) {
-    showRecipes = "You have no recipes yet!"
+    return (
+      <div>
+        <h3>You have no recipes yet!</h3>
+      </div>
+    )
   } else {
     showRecipes = recipes.map(recipe => (
-      <li key={recipe._id}>
-        <Link className="showLink" to={`/recipes/${recipe._id}`}>{recipe.title}</Link>
-        <h4>{recipe.description}</h4>
-      </li>
+      <div key={recipe._id}>
+        <li className="recipe-index">
+          <Link className="showLink" to={`/recipes/${recipe._id}`}>{recipe.title}</Link>
+          <h4>{recipe.description}</h4>
+        </li>
+      </div>
     ))
   }
 
