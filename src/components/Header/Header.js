@@ -13,19 +13,13 @@ const authenticatedOptions = (
 
 const unauthenticatedOptions = (
   <Fragment>
-    <Nav.Link href="#sign-up">Sign Up</Nav.Link>
-    <Nav.Link href="#sign-in">Sign In</Nav.Link>
+    <Nav.Link className="navbar-text" href="#sign-up">Sign Up</Nav.Link>
+    <Nav.Link className="navbar-text" href="#sign-in">Sign In</Nav.Link>
   </Fragment>
 )
 
-// const alwaysOptions = (
-//   <Fragment>
-//     <Nav.Link to="/">Home</Nav.Link>
-//   </Fragment>
-// )
-
 const Header = ({ user }) => (
-  <Navbar className="navbar" bg="secondary" variant="dark" expand="md">
+  <Navbar className="navbar" variant="dark" expand="md">
     <Navbar.Brand className="header-brand" href="#/homepage">
       ALL BUN & GAMES <span className="emoji" role="img" aria-label="donut-emoji"> 🍔</span>
     </Navbar.Brand>
@@ -33,7 +27,6 @@ const Header = ({ user }) => (
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="ml-auto">
         { user && <span className="navbar-text mr-2">Welcome, {user.email}</span>}
-        {/*{ alwaysOptions }*/}
         { user ? authenticatedOptions : unauthenticatedOptions }
       </Nav>
     </Navbar.Collapse>

@@ -6,6 +6,7 @@ $gray: #808080;
 $darkGray: #666;
 $white: #fff;
 $blue: #b3e6ff;
+$info: rbga(129, 189, 203, 0.6);
 
 // ----- Important ----- //
 
@@ -15,7 +16,8 @@ $blue: #b3e6ff;
 }
 
 html, #root {
-  background-image: url(https://i.pinimg.com/originals/56/f9/e2/56f9e272de8708a62f2b94d941382415.jpg);
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
 }
 
 // ----- Recipe Text ----- //
@@ -108,8 +110,12 @@ html, #root {
   color: $black;
 }
 
-.welcome-text {
+.welcome-text-div {
   padding-top: 10%;
+}
+
+.welcome-text {
+  color: $darkGray;
 }
 
 // ----- Homepage ----- //
@@ -138,13 +144,13 @@ html, #root {
 
 // ----- Header ----- //
 
+.navbar {
+  margin-bottom: 15px;
+  background-color: rgba(71, 209, 209, 0.8);
+  // opacity: 0.8;
+}
+
 .header-brand {
   font-size: 25px;
   font-family: 'Fredoka One', cursive;
-  // font-style: italic;
-}
-
-.navbar {
-  margin-bottom: 15px;
-  opacity: 0.8;
 }
