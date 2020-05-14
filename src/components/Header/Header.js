@@ -4,10 +4,10 @@ import Navbar from 'react-bootstrap/Navbar'
 
 const authenticatedOptions = (
   <Fragment>
-    <Nav.Link href="#create-recipe">Create Recipe</Nav.Link>
-    <Nav.Link href="#recipes">View Recipes</Nav.Link>
-    <Nav.Link href="#change-password">Change Password</Nav.Link>
-    <Nav.Link href="#sign-out">Sign Out</Nav.Link>
+    <Nav.Link className="navbar-text" href="#create-recipe">Create Recipe</Nav.Link>
+    <Nav.Link className="navbar-text" href="#recipes">View Recipes</Nav.Link>
+    <Nav.Link className="navbar-text" href="#change-password">Change Password</Nav.Link>
+    <Nav.Link className="navbar-text" href="#sign-out">Sign Out</Nav.Link>
   </Fragment>
 )
 
@@ -25,7 +25,7 @@ const unauthenticatedOptions = (
 // )
 
 const Header = ({ user }) => (
-  <Navbar className="navbar" bg="danger" variant="dark" expand="md">
+  <Navbar className="navbar" bg="secondary" variant="dark" expand="md">
     <Navbar.Brand className="header-brand" href="#/homepage">
       ALL BUN & GAMES <span className="emoji" role="img" aria-label="donut-emoji"> 🍔</span>
     </Navbar.Brand>

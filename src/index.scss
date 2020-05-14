@@ -4,15 +4,17 @@
 $black: #000;
 $gray: #808080;
 $darkGray: #262626;
+$white: #fff;
 
-// ----- All ----- //
+// ----- Important ----- //
 
 * {
   font-family: 'Barlow', sans-serif;
+  color: $black;
 }
 
-.container {
-  background-color: white;
+html, #root {
+  background-image: url(https://i.pinimg.com/originals/56/f9/e2/56f9e272de8708a62f2b94d941382415.jpg);
 }
 
 // ----- Recipe Text ----- //
@@ -90,12 +92,18 @@ $darkGray: #262626;
 
 .welcome-div {
   text-align: center;
-  padding-top: 30px;
+  padding-top: 15%;
 }
 
 .welcome-brand {
   font-family: 'Fredoka One', cursive;
   font-size: 50px;
+  text-decoration: underline;
+  color: $gray;
+}
+
+.welcome-text {
+  padding-top: 10%;
 }
 
 // ----- Homepage ----- //
@@ -110,7 +118,6 @@ $darkGray: #262626;
   font-family: 'Fredoka One', cursive;
   padding-top: 15px;
   padding-bottom: 15px;
-  color: $black;
   font-size: 55px;
 }
 
@@ -128,4 +135,5 @@ $darkGray: #262626;
 
 .navbar {
   margin-bottom: 15px;
+  opacity: 0.8;
 }
