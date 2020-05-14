@@ -13,6 +13,7 @@ import RecipeShow from '../Recipes/RecipeShow'
 import RecipeIndex from '../Recipes/RecipeIndex'
 import RecipeEdit from '../Recipes/RecipeEdit'
 import Home from '../Home/Home'
+import Welcome from '../Welcome/Welcome'
 
 class App extends Component {
   constructor () {
@@ -47,6 +48,9 @@ class App extends Component {
           />
         ))}
         <main className="container">
+          <Route exact path='/' render={() => (
+            <Welcome/>
+          )}/>
           <Route path='/sign-up' render={() => (
             <SignUp msgAlert={this.msgAlert} setUser={this.setUser} />
           )} />

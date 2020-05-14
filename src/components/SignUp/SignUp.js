@@ -31,11 +31,11 @@ class SignUp extends Component {
       .then(() => signIn(this.state))
       .then(res => setUser(res.data.user))
       .then(() => msgAlert({
-        heading: 'Signed up! Please sign in.',
+        heading: 'Welcome!',
         message: messages.signUpSuccess,
         variant: 'success'
       }))
-      .then(() => history.push('/'))
+      .then(() => history.push('/homepage'))
       .catch(error => {
         this.setState({ email: '', password: '', passwordConfirmation: '' })
         msgAlert({
@@ -64,6 +64,9 @@ class SignUp extends Component {
                 placeholder="Enter email"
                 onChange={this.handleChange}
               />
+              <Form.Text className="text-muted">
+                Please use fake emails and passwords!
+              </Form.Text>
             </Form.Group>
             <Form.Group controlId="password">
               <Form.Label>Password</Form.Label>

@@ -5,7 +5,7 @@ $black: #000;
 $gray: #808080;
 $darkGray: #262626;
 
-// ----- Important ----- //
+// ----- All ----- //
 
 * {
   font-family: 'Barlow', sans-serif;
@@ -82,10 +82,33 @@ $darkGray: #262626;
   display: inline-block;
 }
 
+// ----- Welcome ----- //
+
+.welcome-div {
+  text-align: center;
+}
+
+.welcome-brand {
+  font-family: 'Fredoka One', cursive;
+}
+
 // ----- Homepage ----- //
 
 .homepage-div {
   text-align: center;
+  padding-top: 15px;
+  color: $gray;
+}
+
+.homepage-brand {
+  font-family: 'Fredoka One', cursive;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: $black;
+}
+
+.homepage-happy {
+  padding-top: 15px;
 }
 
 // ----- Header ----- //
@@ -94,12 +117,6 @@ $darkGray: #262626;
   font-size: 25px;
   font-family: 'Fredoka One', cursive;
   // font-style: italic;
-}
-
-.homepage-brand {
-  font-family: 'Fredoka One', cursive;
-  padding-top: 15px;
-  padding-bottom: 15px;
 }
 
 .navbar {
