@@ -1,5 +1,7 @@
 # Overview
 
+![PictureofApplication](/public/bun-and-games.png)
+
 All Bun & Games is an online recipe book where you can create, store, modify, and view all your favorite recipes in one convenient location.
 
 It is a fullstack application that uses MongoDB and Express for the backend, and React, JavaScript, and Axios for the frontend.

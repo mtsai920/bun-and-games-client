@@ -5,8 +5,8 @@ $black: #000;
 $gray: #808080;
 $darkGray: #666;
 $white: #fff;
-$blue: #b3e6ff;
-$info: rbga(129, 189, 203, 0.6);
+$red: #eb5b6a;
+$darkBlue: #003399;
 
 // ----- Important ----- //
 
@@ -35,6 +35,11 @@ html, #root {
   font-size: 30px;
   text-decoration: underline;
   display: block;
+  color: $red;
+}
+
+.showLink:hover {
+  color: #b8454e;
 }
 
 .recipe-index-description {
@@ -147,10 +152,10 @@ html, #root {
 .navbar {
   margin-bottom: 15px;
   background-color: rgba(71, 209, 209, 0.8);
-  // opacity: 0.8;
 }
 
 .header-brand {
   font-size: 25px;
   font-family: 'Fredoka One', cursive;
+  color: $white;
 }
