@@ -86,6 +86,10 @@ html, #root {
   text-decoration: underline;
 }
 
+.row {
+  margin-bottom: 10%;
+}
+
 // ----- Buttons ----- //
 
 .recipe-show-buttons {
@@ -112,7 +116,7 @@ html, #root {
   font-family: 'Fredoka One', cursive;
   font-size: 50px;
   text-decoration: underline;
-  color: $black;
+  color: $red;
 }
 
 .welcome-text-div {
@@ -121,6 +125,7 @@ html, #root {
 
 .welcome-text {
   color: $darkGray;
+  font-family: 'Overpass', sans-serif;
 }
 
 // ----- Homepage ----- //

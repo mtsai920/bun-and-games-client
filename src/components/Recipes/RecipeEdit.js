@@ -116,10 +116,10 @@ const RecipeEdit = (props) => {
             />
           </Form.Group>
 
-          <Button type="submit">Update Recipe</Button>
+          <Button variant="dark" type="submit">Update Recipe</Button>
 
           <Link className="recipe-show-buttons" to={`/recipes/${match.params.id}`}>
-            <Button variant="dark">Back</Button>
+            <Button variant="secondary">Back</Button>
           </Link>
 
         </Form>

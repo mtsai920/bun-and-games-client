@@ -7,8 +7,8 @@ const Welcome = function () {
       <h2 className="welcome-text">AN ONLINE RECIPE BOOK</h2>
 
       <div className="welcome-text-div">
-        <h3 className="welcome-text">SAVE AND VIEW YOUR FAVORITE RECIPES ALL IN ONE LOCATION</h3>
-        <h3 className="welcome-text">SIGN UP OR SIGN IN TO GET STARTED</h3>
+        <h4 className="welcome-text"> - Save and view your favorite recipes in one location - </h4>
+        <h4 className="welcome-text"> - Sign up or sign in to get started - </h4>
       </div>
     </div>
   )
