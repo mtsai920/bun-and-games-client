@@ -86,10 +86,12 @@ $darkGray: #262626;
 
 .welcome-div {
   text-align: center;
+  padding-top: 30px;
 }
 
 .welcome-brand {
   font-family: 'Fredoka One', cursive;
+  font-size: 50px;
 }
 
 // ----- Homepage ----- //
@@ -105,6 +107,7 @@ $darkGray: #262626;
   padding-top: 15px;
   padding-bottom: 15px;
   color: $black;
+  font-size: 55px;
 }
 
 .homepage-happy {
