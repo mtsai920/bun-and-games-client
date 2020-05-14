@@ -42,7 +42,7 @@ const RecipeIndex = (props) => {
           <Link className="showLink" to={`/recipes/${recipe._id}`}>{recipe.title}</Link>
           <h4 className="recipe-index-description">{recipe.description}</h4>
           <div className="favorite-button">
-            <Button onClick={toggleFavorited} variant="outline-success">
+            <Button onClick={toggleFavorited} variant="dark">
               {favorited ? 'FAVORITED' : 'FAVORITE' }
             </Button>
           </div>

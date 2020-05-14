@@ -61,7 +61,7 @@ const RecipeCreate = (props) => {
   return (
     <div className="row">
       <div className="col-sm-10 col-md-8 mx-auto mt-5">
-        <h2>Create a Recipe</h2>
+        <h2 className="form-title">Create a Recipe</h2>
         <Form onSubmit={handleSubmit}>
           <Form.Group controlId="formHorizontal">
             <Form.Label>Recipe Title</Form.Label>
