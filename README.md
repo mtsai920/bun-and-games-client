@@ -36,6 +36,10 @@ There are also quite a few things I would like to add for future iterations:
 -   Allowing the user to retrieve/filter by their favorited recipes or by tag
 -   Allowing the user to dynamically add inputs for their ingredients, versus its current version (one large form textarea)
 
+## Technologies Used
+
+React, JavaScript, Bootstrap, Sass, MongoDB, and Express.
+
 ## Wireframes
 
 ![Wireframe1](/public/Wireframe1.png)
