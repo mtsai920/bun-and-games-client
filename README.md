@@ -10,6 +10,8 @@ It is a fullstack application that uses MongoDB and Express for the backend, and
 
 In order to manipulate and program this application for yourself, feel free to fork and clone this repo. Afterwards, ensure that you copy and paste the .gitignore file if you lose it in the process, and `npm install` afterwards.
 
+If you want to run your server, use `npm start`.
+
 ## Development Process
 
 This idea at its base is not particularly exciting, but I believe it has a lot of potential, which is why I chose to tackle this project.
