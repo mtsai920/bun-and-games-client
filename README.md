@@ -24,7 +24,7 @@ Overall, the project was actually pretty smooth-sailing. There were a few proble
 
 There are a few issues I would like to fix, namely:
 -   Adjusting some of the CSS to make it more mobile-friendly
--   Fixing and implementing the Favorite button functionality (The "favorite" button currently does nothing)
+-   Fixing and implementing the Favorite button functionality (There is existing frontend code for it, but nothing yet in the backend)
 -   Finding a more intuitive and better-looking way to display recipe ingredients and instructions
 
 ## Features for Future Iterations
